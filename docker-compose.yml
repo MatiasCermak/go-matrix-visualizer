@@ -1,0 +1,21 @@
+version: '3'
+services:
+  frontend:
+    container_name: react-app
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - my-net
+  backend:
+    container_name: golang-app
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    networks:
+      - my-net
+networks:
+  my-net:
+    driver: bridge
