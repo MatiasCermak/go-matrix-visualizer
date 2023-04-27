@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"matrix-visualizer/backend/pkg/handlers"
+	"matrix-visualizer/backend/pkg/middleware"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -10,6 +11,7 @@ import (
 
 func main() {
 	r := mux.NewRouter()
+	middleware.EnableCORS(r)
 
 	r.HandleFunc("/matrix/{matrixOperation}", handlers.GenerateMatrix).Methods("GET")
 
