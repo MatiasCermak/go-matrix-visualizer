@@ -2,13 +2,15 @@ export default function Matrix({ matrixData }) {
     function renderMatrix() {
         return (
             <table className="table table-bordered">
-                {matrixData.map((row, i) => (
-                    <tr key={i}>
-                        {row.map((num, j) => (
-                            <td key={j}>{num}</td>
-                        ))}
-                    </tr>
-                ))}
+                <tbody>
+                    {matrixData.map((row, i) => (
+                        <tr key={i}>
+                            {row.map((num, j) => (
+                                <td key={j}>{num}</td>
+                            ))}
+                        </tr>
+                    ))}
+                </tbody>
             </table>
         );
     }

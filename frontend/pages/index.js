@@ -7,7 +7,7 @@ export default function Home() {
                 <h1>¡Bienvenido!</h1>
             </header>
             <div className="d-flex align-content-center justify-content-center">
-                <Link href="/matrix/spiralMatrix">
+                <Link href="/matrix/fibonacciSpiral">
                     <div className="btn btn-primary">Acceder a App</div>
                 </Link>
             </div>
